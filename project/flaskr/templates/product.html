@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add product
+{% endblock %}
+
+{% block main %}
+    <form action="/product" method="POST">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="product_name" placeholder="Product name" type="text">
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="number" class="form-control mx-auto w-auto" name="weight" placeholder="Product's weight" min="0" step="1"/>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control mx-auto w-auto" name="kcal" placeholder="kCal" min="0" step="1"/>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control mx-auto w-auto" name="proteins" placeholder="Protein" min="0" step="0.1"/>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control mx-auto w-auto" name="carbs" placeholder="Carbohydrates" min="0" step="0.1"/>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control mx-auto w-auto" name="fats" placeholder="Fats" min="0" step="0.1"/>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary mb-auto w-auto">Add product</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
